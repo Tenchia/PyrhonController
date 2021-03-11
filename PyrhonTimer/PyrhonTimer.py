@@ -7,16 +7,16 @@ toaster = w10t.ToastNotifier()
 ##############################################################
 def click_button(event):
     os.system("shutdown /s")
-    toaster.show_toast("Shutdown", "Your system will be shut down in few minutes. Close window to start process.", duration = 10, threaded = True)
+    toaster.show_toast("Shutdown", "Your system will be shut down in few minutes.", duration = 10, threaded = True)
 def click_button1():
     os.system("shutdown /r")
-    toaster.show_toast("Reboot", "Your system will be rebooted in few minutes. Close window to start process.", duration = 10, threaded = True)
+    toaster.show_toast("Reboot", "Your system will be rebooted in few minutes.", duration = 10, threaded = True)
 def click_button2():
     os.system("shutdown /h")
-    toaster.show_toast("Sleep mode", "Your system will run sleep mode in few minutes. Close window to start process.", duration = 10, threaded = True)
+    toaster.show_toast("Sleep mode", "Your system will run sleep mode in few minutes.", duration = 10, threaded = True)
 def click_button3():
     os.system("shutdown /a")
-    toaster.show_toast("Decline", "You have declined operation. Close window to confirm.", duration = 10, threaded = True)
+    toaster.show_toast("Decline", "You have declined operation.", duration = 10, threaded = True)
 
 root = Tk()
 root.title("Power OS")
