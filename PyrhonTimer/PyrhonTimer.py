@@ -5,7 +5,8 @@ import win10toast as w10t
 toaster = w10t.ToastNotifier()
 
 ##############################################################
-def click_button(event):
+
+def click_button():
     os.system("shutdown /s")
     toaster.show_toast("Shutdown", "Your system will be shut down in few minutes.", duration = 10, threaded = True)
 def click_button1():
@@ -40,4 +41,5 @@ btn3.pack()
 btn3.place(x=20, y=250)
 
 root.mainloop()
+
 ##############################################################
