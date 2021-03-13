@@ -12,6 +12,18 @@ root.geometry("400x300")
 
 type = IntVar()
 
+hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
+hour_checkbutton.pack()
+hour_checkbutton.place(x=120, y=160)
+
+minute_checkbutton = Radiobutton(text = "Minutes", value=2, variable=type)
+minute_checkbutton.pack()
+minute_checkbutton.place(x=120, y=190)
+
+seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
+seconds_checkbutton.pack()
+seconds_checkbutton.place(x=120, y=220)
+
 def click_button():
     os.system("shutdown /s /t " + x)
     toaster.show_toast("Shutdown", "Your system will be shut down in few minutes.", duration = 10, threaded = True)
@@ -24,18 +36,6 @@ def click_button2():
 def click_button3():
     os.system("shutdown /a")
     toaster.show_toast("Decline", "You have declined operation.", duration = 10, threaded = True)
-
-hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
-hour_checkbutton.pack()
-hour_checkbutton.place(x=120, y=160)
-
-minute_checkbutton = Radiobutton(text = "Minutes", value=2, variable=type)
-minute_checkbutton.pack()
-minute_checkbutton.place(x=120, y=190)
-
-seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
-seconds_checkbutton.pack()
-seconds_checkbutton.place(x=120, y=220)
 
 btn = Button(text="Shutdown", command=click_button)
 btn.pack()
