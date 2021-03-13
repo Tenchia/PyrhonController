@@ -6,9 +6,14 @@ import win10toast as w10t
 toaster = w10t.ToastNotifier()
 
 ##############################################################
+root = Tk()
+root.title("Power OS")
+root.geometry("400x300")
+
+type = IntVar()
 
 def click_button():
-    os.system("shutdown /s")
+    os.system("shutdown /s /t " + x)
     toaster.show_toast("Shutdown", "Your system will be shut down in few minutes.", duration = 10, threaded = True)
 def click_button1():
     os.system("shutdown /r")
@@ -19,12 +24,6 @@ def click_button2():
 def click_button3():
     os.system("shutdown /a")
     toaster.show_toast("Decline", "You have declined operation.", duration = 10, threaded = True)
-
-root = Tk()
-root.title("Power OS")
-root.geometry("400x300")
-
-type = IntVar()
 
 hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
 hour_checkbutton.pack()
