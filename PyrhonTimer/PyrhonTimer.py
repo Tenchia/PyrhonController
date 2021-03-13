@@ -1,5 +1,6 @@
 import os
 from tkinter import *
+from datetime import *
 import win10toast as w10t
 
 toaster = w10t.ToastNotifier()
@@ -23,6 +24,19 @@ root = Tk()
 root.title("Power OS")
 root.geometry("400x300")
 
+type = IntVar()
+
+hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
+hour_checkbutton.pack()
+hour_checkbutton.place(x=120, y=160)
+
+minute_checkbutton = Radiobutton(text = "Minutes", value=2, variable=type)
+minute_checkbutton.pack()
+minute_checkbutton.place(x=120, y=190)
+
+seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
+seconds_checkbutton.pack()
+seconds_checkbutton.place(x=120, y=220)
 
 btn = Button(text="Shutdown", command=click_button)
 btn.pack()
