@@ -13,7 +13,7 @@ root.geometry("400x300")
 type = IntVar()
 timeout = StringVar()
 
-timeout_entry = Entry()
+timeout_entry = Entry(textvariable=timeout)
 timeout_entry.place(x=0,y=0)
 
 hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
@@ -28,10 +28,8 @@ seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
 seconds_checkbutton.pack()
 seconds_checkbutton.place(x=120, y=220)
 
-delay = str(timeout_entry.get())
-
 def click_button():
-    os.system("shutdown /s /t ")
+    os.system("shutdown /s /t " + str(timeout))
     toaster.show_toast("Shutdown", "Your system will be shut down in few minutes.", duration = 10, threaded = True)
 def click_button1():
     os.system("shutdown /r")
