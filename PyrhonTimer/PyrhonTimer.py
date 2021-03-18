@@ -14,8 +14,16 @@ root.geometry("400x300")
 type = IntVar()
 timeout = StringVar()
 
+Label1 = Label(text="Enter timeout value:")
+Label1.pack()
+Label1.place(x=0,y=0)
+
+Label2 = Label(text="Test button:")
+Label2.pack()
+Label2.place(x=0,y=50)
+
 timeout_entry = Entry(textvariable=timeout)
-timeout_entry.place(x=0,y=0)
+timeout_entry.place(x=120,y=0)
 
 hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
 hour_checkbutton.pack()
@@ -28,6 +36,7 @@ minute_checkbutton.place(x=120, y=190)
 seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
 seconds_checkbutton.pack()
 seconds_checkbutton.place(x=120, y=220)
+
 
 def show_message():
     messagebox.showinfo("GUI Python", timeout.get())
@@ -47,7 +56,7 @@ def click_button3():
 
 message_button = Button(text="Click Me", command=show_message)
 message_button.pack()
-message_button.place(x=20,y=50)
+message_button.place(x=70,y=50)
 
 btn = Button(text="Shutdown", command=click_button)
 btn.pack()
